@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://ip4s0m0pgc5k"]
+
+[ext_resource type="Script" uid="uid://cy3s8pnj0euys" path="res://Scripts/Mech/mech_leg.gd" id="1_vf4r3"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_bhunq"]
+size = Vector3(0.3, 1, 0.3)
+
+[sub_resource type="BoxMesh" id="BoxMesh_riqys"]
+size = Vector3(0.25, 1, 0.25)
+
+[sub_resource type="BoxMesh" id="BoxMesh_sn0t7"]
+size = Vector3(0.4, 0.15, 0.25)
+
+[node name="MechLeg" type="Node3D" unique_id=1278551969]
+script = ExtResource("1_vf4r3")
+
+[node name="ShoulderPivot" type="Node3D" parent="." unique_id=313026496]
+
+[node name="UpperLeg" type="Node3D" parent="ShoulderPivot" unique_id=1800628996]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+
+[node name="UpperLegMesh" type="MeshInstance3D" parent="ShoulderPivot/UpperLeg" unique_id=392912356]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+mesh = SubResource("BoxMesh_bhunq")
+
+[node name="KneePivot" type="Node3D" parent="ShoulderPivot/UpperLeg" unique_id=873969978]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+
+[node name="LowerLeg" type="Node3D" parent="ShoulderPivot/UpperLeg/KneePivot" unique_id=1788841008]
+
+[node name="LowerLegMesh" type="MeshInstance3D" parent="ShoulderPivot/UpperLeg/KneePivot/LowerLeg" unique_id=2031944304]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+mesh = SubResource("BoxMesh_riqys")
+
+[node name="FootPivot" type="Node3D" parent="ShoulderPivot/UpperLeg/KneePivot/LowerLeg" unique_id=346146677]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+
+[node name="FootMesh" type="MeshInstance3D" parent="ShoulderPivot/UpperLeg/KneePivot/LowerLeg/FootPivot" unique_id=1564684196]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.1)
+mesh = SubResource("BoxMesh_sn0t7")
+
+[node name="RayCast3D" type="RayCast3D" parent="." unique_id=1883943394]
+target_position = Vector3(0, -3, 0)

@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dpngw63qk4nms"]
+
+[ext_resource type="PackedScene" uid="uid://bpf1rli0tcylu" path="res://Scenes/Mech/Mech.tscn" id="1_odjed"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bhunq"]
+size = Vector3(50, 1, 50)
+
+[sub_resource type="BoxMesh" id="BoxMesh_riqys"]
+size = Vector3(50, 1, 50)
+
+[node name="MechTestArena" type="Node3D" unique_id=947092317]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=487018169]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=205577453]
+shape = SubResource("BoxShape3D_bhunq")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=1677562489]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+mesh = SubResource("BoxMesh_riqys")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=822076553]
+transform = Transform3D(0.83218455, 0.43389747, -0.3452564, 0.49640498, -0.30551183, 0.81255436, 0.24708536, -0.8475822, -0.46963114, 0.17443275, 22.932312, 0)
+
+[node name="Mech" parent="." unique_id=855067387 instance=ExtResource("1_odjed")]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=943876915]
+transform = Transform3D(1, 0, 0, 0, 0.90630776, 0.42261827, 0, -0.42261827, 0.90630776, 0, 8, 12)
