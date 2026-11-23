@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://trn75hfm1gfx"]
+
+[ext_resource type="Script" uid="uid://dyup7pklnuwpb" path="res://tests/single_leg_swing.gd" id="1_una6r"]
+
+[node name="Node3D" type="Node3D" unique_id=891086142]
+script = ExtResource("1_una6r")

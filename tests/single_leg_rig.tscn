@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://p3k456wh14v1"]
+
+[ext_resource type="Script" uid="uid://cxahokenua6ik" path="res://tests/single_leg_rig.gd" id="1_qphiv"]
+
+[node name="SingleLegRig" type="Node3D" unique_id=939359417]
+script = ExtResource("1_qphiv")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1496775811]
+transform = Transform3D(0.9997807, 0, 0.020942422, 0, 1, 0, -0.020942422, 0, 0.9997807, 4, 18.540997, 4)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1557380623]
+transform = Transform3D(0.9997617, -0.0061656637, 0.020942423, 0, 0.9592895, 0.28242463, -0.021831183, -0.28235734, 0.9590609, 0.8248296, 2.5, 4.000001)

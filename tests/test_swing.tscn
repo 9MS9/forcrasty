@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dg3q78lnvitra"]
+
+[ext_resource type="Script" uid="uid://2pqjgsmyn8ob" path="res://tests/test_swing.gd" id="1_3bq2g"]
+
+[node name="test_swing" type="Node3D" unique_id=611643264]
+script = ExtResource("1_3bq2g")

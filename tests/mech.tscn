@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cr5yyjcsgqbsk"]
+
+[ext_resource type="Script" uid="uid://b8n647g8eggfu" path="res://tests/mech.gd" id="1_5incn"]
+
+[node name="mech" type="Node3D" unique_id=582190804]
+script = ExtResource("1_5incn")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1601060157]
+transform = Transform3D(0.9990367, 0.033846673, 0.027930157, -0.04210952, 0.91851854, 0.39312926, -0.01234825, -0.39392668, 0.9190589, -2.071989, 4.2856607, 7.8446503)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1983527401]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8271072, 0)
